@@ -1,0 +1,6 @@
+SELECT nome from filme
+	where not EXISTS (SELECT * from exemplar, locacao 
+    	where filme.cod_filme = exemplar.cod_filme 
+        	and exemplar.cod_exemplar = locacao.cod_exemplar
+            and locacao.dt_devolucao is NULL)
+    order by filme.cod_filme;

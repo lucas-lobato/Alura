@@ -1,0 +1,18 @@
+CREATE VIEW vw_filmes_apos_2000 
+            as SELECT * FROM filme 
+            WHERE ano > 2000
+            ORDER BY ano ASC;
+            
+            
+CREATE VIEW vw_filmes_antes_2000  as SELECT filme.nome, filme.ano, profissional_cinema.nome as ator FROM filme  
+         INNER JOIN participacao on participacao.cod_filme = filme.cod_filme
+         INNER JOIN profissional_cinema on participacao.cod_profissional_cinema = profissional_cinema.cod_profissional_cinema
+		 WHERE profissional_cinema.nome = 'Kenneth Branagh'
+         ORDER BY ano ASC;
+         
+         
+CREATE VIEW vw_filmes_antes_2000_ator_principal  as SELECT filme.nome, filme.ano, profissional_cinema.nome as ator FROM filme  
+         INNER JOIN participacao on participacao.cod_filme = filme.cod_filme
+         INNER JOIN profissional_cinema on participacao.cod_profissional_cinema = profissional_cinema.cod_profissional_cinema
+		 WHERE profissional_cinema.nome = 'Kenneth Branagh' and participacao.cod_papel = 1
+         ORDER BY ano ASC;
