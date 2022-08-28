@@ -1,0 +1,21 @@
+Create LANGUAGE plpgsql;
+
+CREATE FUNCTION calculosMatematicos(x int, y int, out soma int, out subtracao int,
+                                    out multiplicacao int, out divisao int) as $$
+Begin
+	soma := x + y;
+    subtracao := x - y;
+    multiplicacao := X * y;
+    divisao := x/y;
+end;
+$$ Language plpgsql;
+
+select calculosMatematicos(1, 3);
+
+CREATE FUNCTION concatenaTexto(x varchar(255), y varchar(255), out texto varchar(255)) as $$
+Begin
+	texto := CONCAT(x,y);
+end;
+$$ Language plpgsql;
+
+SELECT concatenatexto('cariocas sao melhores que ','juiz-foranos');

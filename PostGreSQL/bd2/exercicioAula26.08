@@ -1,0 +1,10 @@
+DROP FUNCTION preco_pelo_nome;
+
+CREATE FUNCTION preco_pelo_nome(nome_filme varchar(255), OUT preco INT) as $$
+Begin
+	SELECT filme.preco_sugerido_locacao FROM filme where filme.nome = nome_filme;
+	preco := 50;
+end;
+$$ Language plpgsql;
+
+SELECT preco_pelo_nome("Corpo Fechado");
