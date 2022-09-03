@@ -19,3 +19,12 @@ end;
 $$ Language plpgsql;
 
 SELECT concatenatexto('cariocas sao melhores que ','juiz-foranos');
+
+
+CREATE or REPLACE FUNCTION preco_sugerido_dobrado(nome_selecionado VARCHAR)
+RETURNS TABLE(preco_sugerido_locacao NUMERIC)
+as $$
+SELECT preco_sugerido_locacao * 2 from filme WHERE nome = nome_selecionado;
+$$ LANGUAGE sql;
+
+SELECT preco_sugerido_dobrado('Advogado do Diabo');
