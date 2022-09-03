@@ -33,5 +33,5 @@ $contasCorrentes = [
 ];
 
 foreach ($contasCorrentes as $cpf => $conta){
-    myPrint($cpf. " " . $conta['titular']);
+    myPrint("$cpf {$conta['titular']} {$conta['saldo']}");
 }
