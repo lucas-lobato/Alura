@@ -1,0 +1,21 @@
+<?php
+
+$notas = [
+    'vinicius' => 10,
+    'lobato' => 9,
+    'lucas' => 8,
+    'luana' => 7,
+    'rosa' => 6,
+    'maria' => 5
+];
+
+krsort($notas);
+var_dump($notas);
+
+if (is_array($notas)) {
+    echo "Sim, é um array" . PHP_EOL;
+}
+
+var_dump(array_is_list($notas));
+
+var_dump(array_key_exists("lobato",$notas));
