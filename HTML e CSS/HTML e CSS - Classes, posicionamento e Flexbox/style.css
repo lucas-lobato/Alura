@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: black;
+    color: #F6F6F6;
+    height: 100vh;
+}
+
+.titulo-destaque {
+    color: rgb(71, 171, 71);
+}
