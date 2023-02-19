@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header></header>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+        </nav>
+    </header>
     <main class="apresentacao">
         <section class="apresentacao__conteudo">
             <h1 class="apresentacao__conteudo__titulo">Desenvolvedor Back-End <strong class="titulo-destaque">a procura de uma oportunidade!</strong></h1>
@@ -16,12 +21,19 @@
                 Procuro uma oportunidade de estágio na área para demonstrar minhas habilidades, assim
                 como adquirir novos conhecimentos para ajudar minha equipe.</p>
             <div class="apresentacao__links">
-                <a class="apresentacao__links__link" href="https://www.linkedin.com/in/lucas-lobato-a81071188/">LinkedIn</a>
-                <a class="apresentacao__links__link" href="https://github.com/lucas-lobato">Github</a>
+                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes:</h2>
+                <a class="apresentacao__links__link" href="https://www.linkedin.com/in/lucas-lobato-a81071188/">
+                    <img class="apresentacao__links__link__images" src="./assets/LinkedIn_icon.svg">
+                    LinkedIn</a>
+                <a class="apresentacao__links__link" href="https://github.com/lucas-lobato">
+                    <img class="apresentacao__links__link__images" src="./assets/github-mark-white.png">
+                    Github</a>
             </div>
         </section>
-        <img src="foto-perfil.jpg" alt="foto perfil" class="imagem">
+        <img src="./assets/foto-perfil.jpg" alt="foto perfil" class="imagem__perfil">
     </main>
-    <footer></footer>
+    <footer class="rodape">
+        <p>Desenvolvido por Lucas Lobato</p>
+    </footer>
 </body>
 </html>
